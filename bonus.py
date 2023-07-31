@@ -21,14 +21,12 @@ try:
  elif unit == 'F':
     print(f"Temperature in Celsius: {fahrenheit_to_celsius(value)} C")
  else:
-   print("Invalid unit. Please use 'C' for Celsius or 'F' for Fahrenheit.")
+  raise TypeError ("Invalid unit. Please use 'C' for Celsius or 'F' for Fahrenheit.")
 
 
 except ValueError:
  print("Invalid value. Please make sure to enter a valid number.")
 
-except TypeError:
-   print("Invalid unit. Please use 'C' for Celsius or 'F' for Fahrenheit.")
    
 
 
