@@ -13,7 +13,7 @@ while t == True:
         unit= userInput[m+1:]
         if (unit.upper() == 'C'):
             tempF= celsius_to_fahrenheit(temp)
-            print(f'Temperature in Fahrenheit: {round(tempF,2)} {unit.upper}')
+            print(f'Temperature in Fahrenheit: {round(tempF,2)} F')
             t = False
         elif(unit.upper() =='F'):
             tempC= fahrenheit_to_celsius(temp)
@@ -24,6 +24,6 @@ while t == True:
     except ValueError as e :
         print(e)
         print('invalid temperature value try again')
-    except TypeError as e:
-            print(e)
+    except TypeError as error:
+            print(error)
             print('invalid temperature unit try again')
