@@ -30,7 +30,7 @@ Description: In this exercise, you will practice using Python exceptions by crea
 2. Write a function `fahrenheit_to_celsius(fahrenheit)` that takes a Fahrenheit temperature as an argument and returns the equivalent temperature in Celsius. Use the formula `celsius = (fahrenheit - 32) * 5/9`.
 
 3. Write a `main` function that:
-    a. Prompts the user for input, asking them to enter a temperature and its unit (either "C" for Celsius or "F" for Fahrenheit), separated by a space (e.g., "25 C" or "77 F").
+   
     b. Splits the input string into a temperature value and its unit.
     c. Tries to convert the input temperature to its opposite unit using the appropriate function (e.g., if the user enters a Celsius temperature, convert it to Fahrenheit).
     d. Handles the following exceptions:
