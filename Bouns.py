@@ -41,13 +41,13 @@ Temperature in Celsius: 38.06 C
 def celsius_to_fahrenheit(celsius):
     temp=round((celsius * 9/5) + 32,2)
     print("Temperature in Celsius:",temp)
-    return False
+    return True
 
 def fahrenheit_to_celsius(fahrenheit):
     
     temp= round((fahrenheit - 32) * 5/9,2)
     print("Temperature in Fahrenheit:",temp)
-    return False
+    return True
 
 functions={
     'c':celsius_to_fahrenheit,
@@ -56,7 +56,10 @@ functions={
 x=True
 while x:
     try :
+        print("To exit enter exit ")
         user_input=input('Enter a temperature and its unit (e.g., "25 C" or "77 F"): ').lower().split()
+        if user_input[0]=="exit":
+            break
         x=functions.get(user_input[1])(float(user_input[0]))
     except ValueError as e :
         print("invalid temperature value Try again ")
