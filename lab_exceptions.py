@@ -1,4 +1,3 @@
-
 def additoin(x, y):
     x = 10
     y = 20
@@ -9,9 +8,7 @@ def additoin(x, y):
 
 try:
     additoin(10, 20)
-except NameError:
-    print("name b is not defind" )
+except NameError as ne:
+    print(f"the Eroor:  {ne}")
 else:
    print("Operation/s inside Try is successful")
-
-
