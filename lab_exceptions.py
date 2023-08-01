@@ -6,8 +6,10 @@ def additoin(x, y):
   
 try:
     additoin(10, 20)
-except Exception as e:
-     print("error", e, e.__class__)
+except NameError as e:
+     print("The variable is not defined", e, e.__class__)
+except:
+    print("something went rong")
 else:
     print("the operation is successful")
 finally:
