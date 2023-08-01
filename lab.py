@@ -22,9 +22,15 @@ def additoin(x, y):
 try:
     additoin(10,20)
 
-except TypeError:
-    print(" the error")
+except Exception as b:
+    print(f"ther error{b}")
+
 else:
     print("successful")
 finally:
     print("the proram is running")
+
+
+#------------------------------------------
+
+  
