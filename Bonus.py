@@ -9,8 +9,6 @@ def fahrenheit_to_celsius(fahrenheit):
 
 
 def main():
-    units_C= 'C'
-    units_F= 'F'
     Conversion = 0
     Conversion_str =""
 
