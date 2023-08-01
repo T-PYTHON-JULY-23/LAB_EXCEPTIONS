@@ -33,7 +33,7 @@ def main():
 try:
      main()
 except TypeError:
-    print("Please try again")
+    print("Invalid unit. Please use 'C' for Celsius or 'F' for Fahrenheit.")
 except ValueError:
     print("Please write the number of the temperature..")
 except Exception as e:
