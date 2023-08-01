@@ -10,31 +10,34 @@ def fahrenheit_to_celsius(fahrenheit):
 
 def main():
     Conversion = 0
-    Conversion_str =""
+    #Tepval= int(Temperature_Value_Unit[0])
+    while True:
+        try: 
+            User_Choice = input("Enter a temperature and its unit (either C for Celsius or F for Fahrenheit), separated by a space (e.g., 25 C or 77 F): ")
+            if User_Choice == "exit":
+                break
+            TempValue,TempUnit= User_Choice.split(" ")
+            if TempValue.isnumeric():
+                TempValue = float(TempValue)
+            else:
+                raise TypeError("Please only enter numbers.")
 
-    try:
-        User_Choice = input("Enter a temperature and its unit (either C for Celsius or F for Fahrenheit), separated by a space (e.g., 25 C or 77 F): ")
-        
-
-    except TypeError: 
-        if User_Choice[1] != units_F and User_Choice[1] != units_C:
-            print("Invalid unit. Please use 'C' for Celsius or 'F' for Fahrenheit.")
-            pass
-    except ValueError: 
-        if User_Choice[0].isnumeric():
-            print("Invalid value. Please use number value.")
-    Temperature_Value_Unit= User_Choice.split(" ")
-    Tepval= int(Temperature_Value_Unit[0])
-    if User_Choice[1] == units_C:
-        Conversion = celsius_to_fahrenheit(Tepval)
-        Conversion_str= str(Conversion) +' F'
             
-    if User_Choice[1] == units_F:
-        Conversion = fahrenheit_to_celsius(Tepval)
-        Conversion_str= str(Conversion) +' C'
-         
-
-    print(f"Converting {User_Choice} to its opposite unit : {Conversion_str} ")
-
+            if TempUnit.upper() == 'C':
+                Conversion = celsius_to_fahrenheit(TempValue)
+                Conversion_str= str(Conversion) +' F'
+                print(f"Converting {User_Choice} to its opposite unit : {Conversion_str} ")
+           
+            elif TempUnit.upper() == 'F':
+                Conversion = fahrenheit_to_celsius(TempValue)
+                Conversion_str= str(Conversion) +' C'
+                print(f"Converting {User_Choice} to its opposite unit : {Conversion_str} ")
+           
+            else:
+                raise TypeError("Invalid unit. Please use 'C' for Celsius or 'F' for Fahrenheit.")
+        except TypeError as  e: 
+            print(e)
+        except ValueError as e: 
+            print(e)
 
 main()
