@@ -25,6 +25,8 @@ def additoin(x, y):
 
 try:
     additoin(10, 20)
+except NameError as e:
+    print('the variable is not defined ')
 except Exception as e :
     print("Opraion failed ")
     print(e.__class__,e)
