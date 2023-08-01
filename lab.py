@@ -22,8 +22,11 @@ def additoin(x, y):
 try:
     additoin(10,20)
 
-except Exception as b:
-    print(f"ther error{b}")
+except Exception as e:
+    print(e)
+
+except Exception :
+    print(e)    
 
 else:
     print("successful")
