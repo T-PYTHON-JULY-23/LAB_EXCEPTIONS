@@ -57,7 +57,7 @@ x=True
 while x:
     try :
         user_input=input('Enter a temperature and its unit (e.g., "25 C" or "77 F"): ').lower().split()
-        x=functions.get(user_input[1])(int(user_input[0]))
+        x=functions.get(user_input[1])(float(user_input[0]))
     except ValueError as e :
         print("invalid temperature value Try again ")
     except TypeError as e :
