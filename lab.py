@@ -7,5 +7,6 @@ def additoin(x, y):
    
 try:
     additoin(10, 20)
+    print("the operation is successful")
 except NameError:
     print("variable not defined")
